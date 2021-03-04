@@ -133,8 +133,3 @@ class ViT(nn.Sequential):
             TransformerEncoder(depth, embedding_size=embedding_size, **kwargs),
             ClassificationHead(embedding_size, n_classes)
         )
-
-
-a = torch.zeros(1, 3, 224, 224)
-b = ViT()(a)
-print(b.shape)
