@@ -4,7 +4,6 @@ import torch.nn.functional as F
 
 from tqdm import tqdm
 from torch.utils.data.dataloader import DataLoader
-from torch.optim.lr_scheduler import StepLR
 
 
 def kd_loss(model_output, teacher_output, label, alpha=0.1, T=3):
